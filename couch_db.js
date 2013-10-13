@@ -39,7 +39,7 @@ exports.database.prototype.init = function(callback)
 
 exports.database.prototype.get = function (key, callback)
 {
-  this.db.getDoc(key, function(er, doc)
+  this.db.getDoc(encodeURIComponent(key), function(er, doc)
   {
     if(doc == null)
     {
